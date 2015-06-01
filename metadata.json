@@ -1,0 +1,16 @@
+{
+  "name": "paulnguyen-panfs",
+  "version": "0.1.0",
+  "author": "Paul Nguyen",
+  "summary": "module takes care of installing panfs, a proprietary driver for Panasas",
+  "license": "Apache 2.0",
+  "source": "https://github.com/Paul-Nguyen/puppet-panfs",
+  "project_page": "https://github.com/Paul-Nguyen/puppet-panfs",
+  "issues_url": "https://github.com/Paul-Nguyen/puppet-panfs/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}
