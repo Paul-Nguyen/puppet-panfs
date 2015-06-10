@@ -41,6 +41,12 @@ panfs { realm => '192.168.1.50' }
 ```
 
 ## Usage
+```
+panfs { realm => '192.168.1.50',
+mountpoint => '/blah',
+}
+```
+Mounts global scope at /blah instead.
 
 
 ## Reference
@@ -50,6 +56,7 @@ panfs { realm => '192.168.1.50' }
 
 Tested on Centos6.
 Requires an RPM or DEB of panfs and panfs-apps to be available in a source repository somewhere.
+Requires firewall rules - see the panfs documentation for which ports.
 
 ## Development
 
