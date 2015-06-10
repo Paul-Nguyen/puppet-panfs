@@ -2,7 +2,7 @@
 #
 class panfs::install inherits panfs {
 
-    package { [$::packagename, $::apps_packagename]:
+    package { [$panfs::packagename, $panfs::apps_packagename]:
         ensure => installed,
     }
 

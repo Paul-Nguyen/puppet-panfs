@@ -70,10 +70,15 @@ class panfs (
     $apps_packagename          = $panfs::params::apps_packagename,
     $callback_address_allow    = $panfs::params::callback_address_allow,
     $callback_address_disallow = $panfs::params::callback_address_disallow,
-)  inherits panfs::params {
+) inherits panfs::params {
+
+    validate_string($realm)
+    validate_string($mountoptions)
+    validate_string($packagename)
+    validate_string($apps_packagename)
 
     class { 'panfs::install': } ->
-    class { 'panfs::mount:': } ~>
+    class { 'panfs::mount': } ~>
     class { 'panfs::service': } ->
     Class['panfs']
 }

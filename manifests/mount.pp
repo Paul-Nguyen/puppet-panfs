@@ -29,9 +29,9 @@
 class panfs::mount inherits panfs {
 #Ubuntu and deb use _netdev, not panauto
 
-    case $::callback_address_allow {
+    case $panfs::callback_address_allow {
         true: {
-            $mountoptions = "${::mountoptions},callback-address-allow=${::callback_address_allow}"
+            $mountoptions = "${panfs::mountoptions},callback-address-allow=${panfs::callback_address_allow}"
         }
         default: {
             $mountoptions = ''
@@ -39,7 +39,7 @@ class panfs::mount inherits panfs {
     }
 
     # panfs://$realm:global /panfs panfs $mount_options 0 0
-    mount { $::mountpoint :
+    mount { $panfs::mountpoint :
         ensure  => mounted,
         atboot  => true,
         device  => "panfs://${::realm}:global",
@@ -47,10 +47,10 @@ class panfs::mount inherits panfs {
         options => $::panfs::mount::mountoptions,
         dump    => 0,
         pass    => 0,
-        require => File[$::mountpoint],
+        require => File[$panfs::mountpoint],
     }
 
-    file { $::mountpoint:
+    file { $panfs::mountpoint:
         ensure  => 'directory',
     }
 }
