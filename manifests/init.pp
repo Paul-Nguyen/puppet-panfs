@@ -75,9 +75,14 @@ class panfs (
 
     validate_string($realm)
     validate_string($mountoptions)
-    validate_string($packagename)
-    validate_string($apps_packagename)
+    validate_string($packagename, $apps_packagename)
+    validate_string($callback_address_allow, $callback_address_disallow)
+    validate_absolute_path($mountpoint)
+    if (!$realm) {
+        fail('No realm specified')
+    }
 
+    class { 'panfs::selinux': } 
     class { 'panfs::install': } ->
     class { 'panfs::mount': } ~>
     class { 'panfs::service': } ->

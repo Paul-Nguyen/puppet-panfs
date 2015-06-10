@@ -34,7 +34,7 @@ class panfs::mount inherits panfs {
             $mountoptions = "${panfs::mountoptions},callback-address-allow=${panfs::callback_address_allow}"
         }
         default: {
-            $mountoptions = ''
+            $mountoptions = "${panfs::mountoptions}"
         }
     }
 
@@ -42,7 +42,7 @@ class panfs::mount inherits panfs {
     mount { $panfs::mountpoint :
         ensure  => mounted,
         atboot  => true,
-        device  => "panfs://${::realm}:global",
+        device  => "panfs://${panfs::realm}:global",
         fstype  => 'panfs',
         options => $::panfs::mount::mountoptions,
         dump    => 0,
