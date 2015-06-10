@@ -82,7 +82,7 @@ class panfs (
         fail('No realm specified')
     }
 
-    class { 'panfs::selinux': } 
+    class { 'panfs::selinux': } ->
     class { 'panfs::install': } ->
     class { 'panfs::mount': } ~>
     class { 'panfs::service': } ->

@@ -11,6 +11,9 @@
     {
       "name": "puppetlabs-stdlib",
       "version_range": ">= 1.0.0"
+    },
+    {
+      "name": "spiette-selinux"
     }
   ],
   "operatingsystem_support": [
