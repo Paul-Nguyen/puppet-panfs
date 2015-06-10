@@ -73,7 +73,7 @@ class panfs (
 )  inherits panfs::params {
 
     class { 'panfs::install': } ->
-    class { 'panfs::mount:' } ~>
+    class { 'panfs::mount:': } ~>
     class { 'panfs::service': } ->
     Class['panfs']
 }
