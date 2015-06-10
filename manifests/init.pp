@@ -66,6 +66,7 @@
 class panfs (
     $realm                     = $panfs::params::realm,
     $mountoptions              = $panfs::params::mountoptions,
+    $mountpoint                = $panfs::params::mountpoint,
     $packagename               = $panfs::params::packagename,
     $apps_packagename          = $panfs::params::apps_packagename,
     $callback_address_allow    = $panfs::params::callback_address_allow,
