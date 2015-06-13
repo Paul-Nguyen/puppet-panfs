@@ -4,10 +4,10 @@
 
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with geonode](#setup)
-    * [What geonode affects](#what-geonode-affects)
+3. [Setup - The basics of getting started with panfs](#setup)
+    * [What panfs affects](#what-panfs-affects)
     * [Setup requirements](#setup-requirements)
-    * [Beginning with geonode](#beginning-with-geonode)
+    * [Beginning with panfs](#beginning-with-panfs)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
