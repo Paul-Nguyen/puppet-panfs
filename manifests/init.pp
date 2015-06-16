@@ -74,12 +74,16 @@ class panfs (
 ) inherits panfs::params {
 
     validate_string($realm)
-    validate_string($mountoptions)
     validate_string($packagename, $apps_packagename)
     validate_string($callback_address_allow, $callback_address_disallow)
     validate_absolute_path($mountpoint)
+
     if (!$realm) {
         fail('No realm specified')
+    } else {
+        if (!is_ip_address($realm)) {
+            validate_string($realm)
+        }
     }
 
     class { 'panfs::selinux': } ->

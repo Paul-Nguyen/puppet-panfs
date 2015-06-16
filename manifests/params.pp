@@ -1,7 +1,7 @@
 #== Class: panfs::params
 class panfs::params {
     $realm                     = undef
-    $mountoptions              = 'rw,noauto,panauto'
+    $mountoptions              = undef
     $mountpoint                = '/panfs'
     $packagename               = 'panfs'
     $apps_packagename          = 'panfs-apps'
